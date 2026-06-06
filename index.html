@@ -9,43 +9,42 @@
 
 <style>
 /* 2026-06-06
-   cg12r.com 新前端首頁（金色版）
-   用途：建立可被 Cloudflare 大量快取的公開首頁
-   原則：不讀會員、不讀購物車、不使用浮動狀態
+   cg12r.com 新前端首頁
+   金屬金色主題
 */
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
     font-family: Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-    background: #fff8e1; /* 淺金色背景 */
+    background: #f7f7f7;
     color: #333;
     line-height: 1.7;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+a { color: inherit; text-decoration: none; }
 
+/* Header */
 .header {
-    background: #fff8e1;
-    border-bottom: 1px solid #ffe082;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
     padding: 14px 18px;
 }
 
 .logo {
     font-size: 26px;
     font-weight: bold;
-    color: #ffd700; /* 主LOGO金色 */
+    background: linear-gradient(145deg, #f9d56e, #d4aa60, #f0c75e);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .logo-sub {
     font-size: 14px;
-    color: #b8860b; /* 副標深金色 */
+    background: linear-gradient(145deg, #e5c880, #b38e54, #d4b26b);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .nav {
@@ -56,22 +55,27 @@ a {
 }
 
 .nav a {
-    background: #fff3c4; /* 導覽淺金色背景 */
-    color: #8a5a00;      /* 導覽文字深金色 */
+    background: #f0ebf8;
+    color: #5b3f8c;
     padding: 6px 12px;
     border-radius: 16px;
     font-size: 14px;
 }
 
+/* Hero 區塊 */
 .hero {
-    background: #ffd700; /* 主視覺金色 */
+    background: #f4c542;
     color: #333;
     padding: 34px 18px;
     text-align: center;
 }
 
-.hero h1{
-    color: #b8860b; /* 深金色標題 */
+.hero h1 {
+    font-size: 28px;
+    background: linear-gradient(145deg, #f9d56e, #d4aa60, #f0c75e);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 
 .hero p {
@@ -98,9 +102,10 @@ a {
     padding: 12px 18px;
     border: 0;
     border-radius: 6px;
-    background: #b8860b; /* 深金色按鈕 */
+    background: #d4aa60; /* 金色按鈕 */
     color: #fff;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .container {
@@ -110,7 +115,7 @@ a {
 }
 
 .section {
-    background: #fff8e1; /* 區塊淺金色 */
+    background: #fff;
     margin-bottom: 18px;
     padding: 18px;
     border-radius: 10px;
@@ -118,7 +123,7 @@ a {
 
 .section h2 {
     margin-top: 0;
-    color: #b8860b; /* 區塊標題金色 */
+    color: #5b3f8c;
     font-size: 22px;
 }
 
@@ -129,44 +134,33 @@ a {
 }
 
 .card {
-    background: #fff3c4;
-    border: 1px solid #ffe082;
+    background: #fafafa;
+    border: 1px solid #eee;
     padding: 14px;
     border-radius: 8px;
 }
 
 .card strong {
     display: block;
-    color: #8a5a00;
+    color: #333;
     margin-bottom: 6px;
 }
 
 .footer {
     text-align: center;
     padding: 24px 12px;
-    color: #8a5a00;
+    color: #777;
     font-size: 14px;
-    background: #fff8e1;
 }
 
 @media (max-width: 900px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 520px) {
-    .hero h1 {
-        font-size: 24px;
-    }
-
-    .search-box {
-        flex-direction: column;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
+    .hero h1 { font-size: 24px; }
+    .search-box { flex-direction: column; }
+    .grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -190,7 +184,7 @@ a {
     <h1>AV便利店｜日本AV新片｜中文字幕｜熱門AV女優</h1>
     <p>整理最新日本AV、中文字幕作品、人氣系列、熱門女優與購買教學，提供快速瀏覽與超商取貨相關資訊。</p>
 
-    <form class="search-box" action="https://www.myokav.com/search.php" method="get" target="_blank">
+    <form class="search-box" action="https://www.myokav.com/search.php" method="get">
         <input type="text" name="keyword" placeholder="搜尋片名、女優、分類">
         <button type="submit">搜尋</button>
     </form>
@@ -226,7 +220,7 @@ a {
 </main>
 
 <footer class="footer">
-    © AV便利店｜cg12r.com 新前端測試站
+    c AV便利店｜cg12r.com 新前端測試站
 </footer>
 
 </body>
