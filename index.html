@@ -3,112 +3,363 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AV便利店｜日本AV新片｜中文字幕｜熱門AV女優</title>
+<title>AV便利店｜591式首頁</title>
+<meta name="description" content="AV便利店快速瀏覽日本AV新片、熱門女優、公開分類與商品，手機、平板、電腦共用首頁。">
+
 <style>
-/* 精簡黑金首頁模板 */
-:root {
-    --gold-light: #fff6d5;
-    --gold-medium: #f3d27a;
-    --gold-dark: #b77f2f;
-    --gold-shadow: rgba(0,0,0,0.25);
+:root{
+    --gold:#c8953c;
+    --gold-light:#fff6d5;
+    --gold-dark:#b77f2f;
+    --bg:#f5f5f5;
+    --text:#222;
+    --card:#fff;
 }
 
-body {
-    margin:0; font-family: Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-    background:#f7f7f7; color:#333;
-}
-.header { background:#000; padding:18px; border-bottom:3px solid var(--gold-dark); }
-.logo { font-size:42px; font-weight:bold;
-    background: linear-gradient(180deg,var(--gold-light),var(--gold-medium),var(--gold-dark));
-    -webkit-background-clip:text; -webkit-text-fill-color:transparent; text-shadow:0 1px 1px var(--gold-shadow);
-}
-.logo-sub { font-size:14px; color:var(--gold-dark); margin-top:5px; }
-.nav { margin-top:15px; display:flex; flex-wrap:wrap; gap:10px; }
-.nav a { background:#111; border:1px solid var(--gold-dark); color:var(--gold-medium); padding:6px 12px; border-radius:4px; font-size:14px; }
+*{box-sizing:border-box;}
 
-.hero {
-    background: linear-gradient(180deg,#1d1d1d 0%,#000 100%);
-    text-align:center; padding:50px 20px;
+body{
+    margin:0;
+    font-family:Arial,"Microsoft JhengHei",sans-serif;
+    background:var(--bg);
+    color:var(--text);
 }
-.hero h1 {
-    font-size:42px;
-    background: linear-gradient(180deg,var(--gold-light),var(--gold-medium),var(--gold-dark));
-    -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-    margin-bottom:15px;
+
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+
+/* Header */
+.header{
+    background:#000;
+    color:#fff;
+    border-bottom:3px solid var(--gold);
 }
-.hero p { color:#ddd; max-width:760px; margin:0 auto 18px; }
-.search-box { max-width:620px; margin:0 auto; display:flex; gap:8px; }
-.search-box input { flex:1; padding:12px; border-radius:6px; border:1px solid #999; }
-.search-box button {
-    padding:12px 18px; border:0; border-radius:6px;
-    background: linear-gradient(180deg,var(--gold-medium),var(--gold-dark));
-    color:#000; font-weight:bold; cursor:pointer;
+.header-inner{
+    max-width:1180px;
+    margin:auto;
+    padding:14px 16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
 }
-.container { max-width:1100px; margin:0 auto; padding:22px 16px; }
-.section { background:#fff; margin-bottom:18px; padding:18px; border-radius:10px; }
-.section h2 { color:var(--gold-dark); font-size:22px; border-left:5px solid var(--gold-dark); padding-left:10px; margin-top:0; }
-.grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
-.card { background:#fff; border:1px solid #ddd; padding:14px; border-radius:8px; transition:.2s; }
-.card:hover { border-color:var(--gold-dark); box-shadow:0 0 10px var(--gold-shadow); }
-.card strong { display:block; color:#3b2a00; margin-bottom:6px; }
-.footer { text-align:center; padding:24px 12px; color:var(--gold-dark); font-size:14px; }
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:520px){.hero h1{font-size:24px;}.search-box{flex-direction:column;}.grid{grid-template-columns:1fr;}}
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    background:linear-gradient(180deg,var(--gold-light),var(--gold),var(--gold-dark));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+.logo-sub{
+    font-size:13px;
+    color:var(--gold);
+    margin-top:2px;
+}
+.nav-main, .nav-user{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+.nav-main a, .nav-user a{
+    padding:6px 10px;
+    border:1px solid var(--gold-dark);
+    border-radius:6px;
+    font-size:14px;
+    color:var(--gold-light);
+}
+
+/* Hero */
+.hero{
+    background:linear-gradient(180deg,#111,#000);
+    padding:40px 16px;
+    color:#fff;
+}
+.hero-inner{
+    max-width:880px;
+    margin:auto;
+    text-align:center;
+}
+.hero h1{
+    font-size:32px;
+    color:var(--gold);
+    margin-bottom:12px;
+}
+.hero p{
+    margin-bottom:20px;
+    font-size:16px;
+    color:#ddd;
+}
+.search-box{
+    display:flex;
+    gap:8px;
+    max-width:640px;
+    margin:auto;
+}
+.search-box input{
+    flex:1;
+    height:44px;
+    border-radius:8px;
+    border:0;
+    padding:0 12px;
+    font-size:16px;
+}
+.search-box button{
+    width:90px;
+    border:0;
+    border-radius:8px;
+    background:linear-gradient(180deg,var(--gold-light),var(--gold-dark));
+    font-weight:bold;
+    font-size:15px;
+    cursor:pointer;
+}
+
+/* 主分類 */
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    max-width:880px;
+    margin:16px auto;
+}
+.quick-item{
+    padding:12px;
+    background:#fafafa;
+    border:1px solid #e3d3a5;
+    border-radius:10px;
+    font-weight:bold;
+    text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.05);
+}
+.quick-item.hot{
+    background:linear-gradient(180deg,#fff8dd,#f3d27a);
+}
+
+/* 子分類面板 */
+.subcat-panel{
+    display:none;
+    max-width:880px;
+    margin:auto;
+    margin-bottom:18px;
+    gap:8px;
+    flex-wrap:wrap;
+    display:flex;
+}
+.subcat-panel a{
+    padding:6px 10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:14px;
+    background:#fff;
+}
+
+/* 商品區 */
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-bottom:18px;
+}
+.product-card{
+    border:1px solid #ddd;
+    border-radius:10px;
+    overflow:hidden;
+    background:#fff;
+}
+.product-img{
+    width:100%;
+    aspect-ratio:3/4;
+    background:#ddd;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#888;
+    font-size:14px;
+}
+.product-body{
+    padding:8px;
+}
+.product-title{font-size:14px;height:40px;overflow:hidden;}
+.product-meta{font-size:12px;color:#666;margin-top:6px;}
+
+/* 女優區 / 文章區 */
+.tag-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+.tag-list a{
+    padding:8px 14px;
+    border-radius:999px;
+    border:1px solid #ddd;
+    font-size:14px;
+    background:#f5f5f5;
+}
+
+/* APP下載 */
+.app-box{
+    background:linear-gradient(135deg,#111,#3b2a00);
+    color:#fff;
+    border-radius:12px;
+    padding:16px;
+    margin-bottom:18px;
+}
+.app-box a{
+    background:var(--gold);
+    color:#000;
+    padding:10px 16px;
+    border-radius:8px;
+    font-weight:bold;
+    display:inline-block;
+}
+
+/* Footer */
+.footer{
+    background:#000;
+    color:#ccc;
+    padding:24px 16px;
+    text-align:center;
+    font-size:14px;
+}
+.footer a{
+    margin:0 8px;
+    color:var(--gold);
+}
+
+/* RWD */
+@media(max-width:900px){
+    .header-inner{flex-direction:column;align-items:flex-start;}
+    .product-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:560px){
+    .hero h1{font-size:25px;}
+    .search-box{flex-direction:column;}
+    .search-box button{width:100%;height:44px;}
+    .quick-grid{grid-template-columns:repeat(2,1fr);}
+}
 </style>
 </head>
 <body>
 
 <header class="header">
-    <div class="logo">AV便利店</div>
-    <div class="logo-sub">日本AV｜中文字幕｜熱門女優</div>
-    <nav class="nav">
+<div class="header-inner">
+    <div>
+        <div class="logo">AV便利店</div>
+        <div class="logo-sub">日本AV｜熱門女優｜中文字幕</div>
+    </div>
+    <nav class="nav-main">
         <a href="/category">熱門分類</a>
-        <a href="/actress">熱門女優</a>
-        <a href="/news">最新新聞</a>
+        <a href="/actress">女優</a>
+        <a href="/news">新聞</a>
         <a href="/blog">部落格</a>
-        <a href="/app">APP入口</a>
+        <a href="/app">APP</a>
     </nav>
+    <nav class="nav-user">
+        <a href="https://www.myokav.com/modules.php?app=user_login">登入</a>
+        <a href="https://www.myokav.com/modules.php?app=reg">免費註冊</a>
+        <a href="https://www.myokav.com/modules.php?app=cart">購物車</a>
+        <a href="https://www.myokav.com/modules.php?app=user">會員中心</a>
+        <a href="https://www.myokav.com/contactus.php">聯絡我們</a>
+    </nav>
+</div>
 </header>
 
 <section class="hero">
-    <h1>AV便利店｜日本AV新片｜中文字幕｜熱門AV女優</h1>
-    <p>整理最新日本AV、中文字幕作品、人氣系列、熱門女優與購買教學，提供快速瀏覽與超商取貨相關資訊。</p>
+<div class="hero-inner">
+    <h1>AV便利店｜日本AV｜熱門女優｜中文字幕</h1>
+    <p>快速瀏覽新片、分類與女優作品，手機與APP WebView最適合。</p>
     <form class="search-box" action="https://www.myokav.com/search.php" method="get">
-        <input type="text" name="keyword" placeholder="搜尋片名、女優、分類">
+        <input type="text" name="keyword" placeholder="搜尋片名、女優、番號、分類">
         <button type="submit">搜尋</button>
     </form>
+</div>
 </section>
 
+<section class="quick-grid">
+    <button class="quick-item" data-panel="chinese">中文字幕</button>
+    <button class="quick-item" data-panel="hotcat">熱門分類</button>
+    <button class="quick-item" data-panel="actress">女優</button>
+    <button class="quick-item" data-panel="new">本期新片</button>
+    <button class="quick-item" data-panel="hdd">硬碟專區</button>
+    <button class="quick-item" data-panel="bluray">藍光原版</button>
+    <button class="quick-item" data-panel="photo">寫真</button>
+    <button class="quick-item" data-panel="guide">購買教學</button>
+</section>
+
+<!-- 子分類面板示意 -->
+<div class="subcat-panel" id="panel-chinese">
+    <a href="/category.php?name=中文無碼">中文無碼</a>
+    <a href="/category.php?name=中文有碼">中文有碼</a>
+    <a href="/category.php?name=破壞版中文">破壞版中文</a>
+</div>
+
+<div class="subcat-panel" id="panel-hotcat">
+    <a href="/category.php?name=東京熱">東京熱</a>
+    <a href="/category.php?name=熟女人妻">熟女人妻</a>
+    <a href="/category.php?name=學生制服">學生制服</a>
+    <a href="/category.php?name=素人系列">素人系列</a>
+</div>
+
 <main class="container">
+    <!-- 最新上架 -->
     <section class="section">
-        <h2>熱門分類</h2>
-        <div class="grid">
-            <div class="card"><strong>中文字幕</strong>精選中文字幕作品與熱門系列。</div>
-            <div class="card"><strong>日本AV新片</strong>每日整理最新上架資訊。</div>
-            <div class="card"><strong>熱門女優</strong>人氣女優作品快速瀏覽。</div>
-            <div class="card"><strong>劇情系列</strong>依照主題與系列分類整理。</div>
+        <h2 class="section-title">最新上架</h2>
+        <div class="product-grid">
+            <a class="product-card" href="#">
+                <div class="product-img">商品圖片</div>
+                <div class="product-body">
+                    <div class="product-title">日本AV新片範例標題</div>
+                    <div class="product-meta">2026-06-06｜中文字幕</div>
+                </div>
+            </a>
         </div>
     </section>
 
+    <!-- 熱門女優 -->
     <section class="section">
-        <h2>最新新聞</h2>
-        <div class="grid">
-            <div class="card"><strong>新片上架整理</strong>最新作品與熱門分類更新。</div>
-            <div class="card"><strong>熱門女優動態</strong>人氣女優與代表作品介紹。</div>
-            <div class="card"><strong>購買教學</strong>超商取貨、光碟與硬碟說明。</div>
-            <div class="card"><strong>網站公告</strong>APP、分類與服務更新資訊。</div>
+        <h2 class="section-title">熱門女優推薦</h2>
+        <div class="tag-list">
+            <a href="#">三上悠亞</a>
+            <a href="#">河北彩花</a>
+            <a href="#">明里紬</a>
+            <a href="#">葵司</a>
         </div>
     </section>
 
+    <!-- 新聞 / 部落格 -->
     <section class="section">
-        <h2>APP入口</h2>
-        <p>手機與平板可使用新版前端瀏覽，介面簡潔、載入快速，適合 APP WebView 使用。</p>
+        <h2 class="section-title">新聞 / 部落格</h2>
+        <div class="article-grid">
+            <a class="article-card" href="/news"><strong>新片資訊</strong><p>整理近期上架作品與熱門排行</p></a>
+            <a class="article-card" href="/blog"><strong>購買教學</strong><p>光碟、硬碟與超商取貨說明</p></a>
+        </div>
+    </section>
+
+    <!-- APP -->
+    <section class="section app-box">
+        <h2 class="section-title">APP下載 / 推薦</h2>
+        <a href="/app">前往APP WebView</a>
     </section>
 </main>
 
 <footer class="footer">
-    © AV便利店｜cg12r.com 新前端測試站
+    <a href="https://www.myokav.com/contactus.php">聯絡我們</a>
+    <a href="https://www.myokav.com/article.php?id=37">購物須知</a>
+    <a href="https://www.myokav.com/">舊站入口</a>
+    <a href="/privacy">隱私權政策</a>
+    <p>© AV便利店｜cg12r.com</p>
 </footer>
+
+<script>
+/* 小 JS 切換子分類面板 */
+document.querySelectorAll('.quick-item').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        document.querySelectorAll('.subcat-panel').forEach(p=>p.style.display='none');
+        const panel=document.getElementById('panel-'+btn.dataset.panel);
+        if(panel) panel.style.display='flex';
+    });
+});
+</script>
 
 </body>
 </html>
