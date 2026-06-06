@@ -3,179 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AV便利店｜日本AV新片｜中文字幕｜熱門AV女優｜超商取貨</title>
-<meta name="description" content="AV便利店整理最新日本AV新片、中文字幕作品、熱門AV女優、人氣系列與購買教學，提供超商取貨、光碟與硬碟相關資訊。">
-
+<title>AV便利店｜日本AV新片｜中文字幕｜熱門AV女優</title>
 <style>
-/* 2026-06-06
-   cg12r.com 新前端首頁
-   用途：建立可被 Cloudflare 大量快取的公開首頁
-   原則：不讀會員、不讀購物車、不使用浮動狀態
-*/
-
-* {
-    box-sizing: border-box;
+/* 精簡黑金首頁模板 */
+:root {
+    --gold-light: #fff6d5;
+    --gold-medium: #f3d27a;
+    --gold-dark: #b77f2f;
+    --gold-shadow: rgba(0,0,0,0.25);
 }
 
 body {
-    margin: 0;
-    font-family: Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-    background: #f7f7f7;
-    color: #333;
-    line-height: 1.7;
+    margin:0; font-family: Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    background:#f7f7f7; color:#333;
 }
-
-a {
-    color: inherit;
-    text-decoration: none;
+.header { background:#000; padding:18px; border-bottom:3px solid var(--gold-dark); }
+.logo { font-size:42px; font-weight:bold;
+    background: linear-gradient(180deg,var(--gold-light),var(--gold-medium),var(--gold-dark));
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent; text-shadow:0 1px 1px var(--gold-shadow);
 }
-
-.header {
-    background: #ffffff;
-    border-bottom: 1px solid #e5e5e5;
-    padding: 14px 18px;
-}
-
-.logo {
-    font-size: 26px;
-    font-weight: bold;
-    color: #c7a15d; /* 金色 LOGO */
-}
-
-.logo-sub {
-    font-size: 14px;
-    color: #866f50; /* 暖金色次標 */
-}
-
-.nav {
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.nav a {
-    background: #fdf5e6; /* 金色系背景 */
-    color: #5a3d00; /* 金色文字 */
-    padding: 6px 12px;
-    border-radius: 16px;
-    font-size: 14px;
-}
+.logo-sub { font-size:14px; color:var(--gold-dark); margin-top:5px; }
+.nav { margin-top:15px; display:flex; flex-wrap:wrap; gap:10px; }
+.nav a { background:#111; border:1px solid var(--gold-dark); color:var(--gold-medium); padding:6px 12px; border-radius:4px; font-size:14px; }
 
 .hero {
-    background: #d6b75b; /* 金色主背景 */
-    color: #3b2a00; /* 深色文字 */
-    padding: 34px 18px;
-    text-align: center;
+    background: linear-gradient(180deg,#1d1d1d 0%,#000 100%);
+    text-align:center; padding:50px 20px;
 }
-
 .hero h1 {
-    color:#3b2a00; /* 標題深金 */
+    font-size:42px;
+    background: linear-gradient(180deg,var(--gold-light),var(--gold-medium),var(--gold-dark));
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+    margin-bottom:15px;
 }
-
-.hero p {
-    margin: 0 auto 18px;
-    max-width: 760px;
-}
-
-.search-box {
-    max-width: 620px;
-    margin: 0 auto;
-    display: flex;
-    gap: 8px;
-}
-
-.search-box input {
-    flex: 1;
-    padding: 12px;
-    border: 0;
-    border-radius: 6px;
-    font-size: 16px;
-}
-
+.hero p { color:#ddd; max-width:760px; margin:0 auto 18px; }
+.search-box { max-width:620px; margin:0 auto; display:flex; gap:8px; }
+.search-box input { flex:1; padding:12px; border-radius:6px; border:1px solid #999; }
 .search-box button {
-    padding: 12px 18px;
-    border: 0;
-    border-radius: 6px;
-    background: #c7a15d; /* 金色按鈕 */
-    color: #fff;
-    font-weight: bold;
+    padding:12px 18px; border:0; border-radius:6px;
+    background: linear-gradient(180deg,var(--gold-medium),var(--gold-dark));
+    color:#000; font-weight:bold; cursor:pointer;
 }
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 22px 16px;
-}
-
-.section {
-    background: #fff;
-    margin-bottom: 18px;
-    padding: 18px;
-    border-radius: 10px;
-}
-
-.section h2 {
-    margin-top: 0;
-    color: #866f50; /* 金色小標題 */
-    font-size: 22px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-}
-
-.card {
-    background: #fafafa;
-    border: 1px solid #eee;
-    padding: 14px;
-    border-radius: 8px;
-}
-
-.card strong {
-    display: block;
-    color: #3b2a00; /* 深金色文字 */
-    margin-bottom: 6px;
-}
-
-.footer {
-    text-align: center;
-    padding: 24px 12px;
-    color: #866f50;
-    font-size: 14px;
-}
-
-@media (max-width: 900px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 520px) {
-    .hero h1 {
-        font-size: 24px;
-    }
-
-    .search-box {
-        flex-direction: column;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
+.container { max-width:1100px; margin:0 auto; padding:22px 16px; }
+.section { background:#fff; margin-bottom:18px; padding:18px; border-radius:10px; }
+.section h2 { color:var(--gold-dark); font-size:22px; border-left:5px solid var(--gold-dark); padding-left:10px; margin-top:0; }
+.grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+.card { background:#fff; border:1px solid #ddd; padding:14px; border-radius:8px; transition:.2s; }
+.card:hover { border-color:var(--gold-dark); box-shadow:0 0 10px var(--gold-shadow); }
+.card strong { display:block; color:#3b2a00; margin-bottom:6px; }
+.footer { text-align:center; padding:24px 12px; color:var(--gold-dark); font-size:14px; }
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:520px){.hero h1{font-size:24px;}.search-box{flex-direction:column;}.grid{grid-template-columns:1fr;}}
 </style>
 </head>
-
 <body>
 
 <header class="header">
     <div class="logo">AV便利店</div>
     <div class="logo-sub">日本AV｜中文字幕｜熱門女優</div>
-
     <nav class="nav">
         <a href="/category">熱門分類</a>
         <a href="/actress">熱門女優</a>
@@ -188,7 +73,6 @@ a {
 <section class="hero">
     <h1>AV便利店｜日本AV新片｜中文字幕｜熱門AV女優</h1>
     <p>整理最新日本AV、中文字幕作品、人氣系列、熱門女優與購買教學，提供快速瀏覽與超商取貨相關資訊。</p>
-
     <form class="search-box" action="https://www.myokav.com/search.php" method="get">
         <input type="text" name="keyword" placeholder="搜尋片名、女優、分類">
         <button type="submit">搜尋</button>
@@ -196,7 +80,6 @@ a {
 </section>
 
 <main class="container">
-
     <section class="section">
         <h2>熱門分類</h2>
         <div class="grid">
@@ -221,11 +104,10 @@ a {
         <h2>APP入口</h2>
         <p>手機與平板可使用新版前端瀏覽，介面簡潔、載入快速，適合 APP WebView 使用。</p>
     </section>
-
 </main>
 
 <footer class="footer">
-    c AV便利店｜cg12r.com 新前端測試站
+    © AV便利店｜cg12r.com 新前端測試站
 </footer>
 
 </body>
