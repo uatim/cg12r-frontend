@@ -10,10 +10,13 @@
 <style>
 /* 2026-06-06
    cg12r.com 新前端首頁
-   金屬金色主題
+   用途：建立可被 Cloudflare 大量快取的公開首頁
+   原則：不讀會員、不讀購物車、不使用浮動狀態
 */
 
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -23,9 +26,11 @@ body {
     line-height: 1.7;
 }
 
-a { color: inherit; text-decoration: none; }
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-/* Header */
 .header {
     background: #ffffff;
     border-bottom: 1px solid #e5e5e5;
@@ -35,16 +40,12 @@ a { color: inherit; text-decoration: none; }
 .logo {
     font-size: 26px;
     font-weight: bold;
-    background: linear-gradient(145deg, #f9d56e, #d4aa60, #f0c75e);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: #c7a15d; /* 金色 LOGO */
 }
 
 .logo-sub {
     font-size: 14px;
-    background: linear-gradient(145deg, #e5c880, #b38e54, #d4b26b);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: #866f50; /* 暖金色次標 */
 }
 
 .nav {
@@ -55,27 +56,22 @@ a { color: inherit; text-decoration: none; }
 }
 
 .nav a {
-    background: #f0ebf8;
-    color: #5b3f8c;
+    background: #fdf5e6; /* 金色系背景 */
+    color: #5a3d00; /* 金色文字 */
     padding: 6px 12px;
     border-radius: 16px;
     font-size: 14px;
 }
 
-/* Hero 區塊 */
 .hero {
-    background: #f4c542;
-    color: #333;
+    background: #d6b75b; /* 金色主背景 */
+    color: #3b2a00; /* 深色文字 */
     padding: 34px 18px;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 28px;
-    background: linear-gradient(145deg, #f9d56e, #d4aa60, #f0c75e);
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    color:#3b2a00; /* 標題深金 */
 }
 
 .hero p {
@@ -102,10 +98,9 @@ a { color: inherit; text-decoration: none; }
     padding: 12px 18px;
     border: 0;
     border-radius: 6px;
-    background: #d4aa60; /* 金色按鈕 */
+    background: #c7a15d; /* 金色按鈕 */
     color: #fff;
     font-weight: bold;
-    cursor: pointer;
 }
 
 .container {
@@ -123,7 +118,7 @@ a { color: inherit; text-decoration: none; }
 
 .section h2 {
     margin-top: 0;
-    color: #5b3f8c;
+    color: #866f50; /* 金色小標題 */
     font-size: 22px;
 }
 
@@ -142,25 +137,35 @@ a { color: inherit; text-decoration: none; }
 
 .card strong {
     display: block;
-    color: #333;
+    color: #3b2a00; /* 深金色文字 */
     margin-bottom: 6px;
 }
 
 .footer {
     text-align: center;
     padding: 24px 12px;
-    color: #777;
+    color: #866f50;
     font-size: 14px;
 }
 
 @media (max-width: 900px) {
-    .grid { grid-template-columns: repeat(2, 1fr); }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 520px) {
-    .hero h1 { font-size: 24px; }
-    .search-box { flex-direction: column; }
-    .grid { grid-template-columns: 1fr; }
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
